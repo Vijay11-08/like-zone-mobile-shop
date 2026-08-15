@@ -21,57 +21,43 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- Background Decorations -->
-  <div class="bg-decorations" aria-hidden="true">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="grid-pattern"></div>
-    <div class="glow-circle glow-1"></div>
-    <div class="glow-circle glow-2"></div>
-  </div>
-
-  <!-- ============================================================
-       NAVBAR
-  ============================================================ -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark glass-navbar sticky-top" id="mainNavbar" aria-label="Main navigation">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar sticky-top" id="mainNavbar"
+      aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Like Zone Mobile Shop Home">
-          <div class="logo-icon" aria-hidden="true">
-            <i class="bi bi-phone-fill"></i>
-          </div>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"
+          aria-label="Like Zone Mobile Shop Home">
+          <img src="images/LIKEZONE%20LOGO.png" alt="Like Zone Logo"
+            style="height: 42px; width: auto; border-radius: 8px;" />
           <div class="logo-text">
             <span class="logo-main">LIKE ZONE</span>
             <span class="logo-sub">MOBILE SHOP</span>
           </div>
         </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarContent" aria-controls="navbarContent"
-          aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav mx-auto gap-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="mobiles.html" class="nav-link active">Mobiles</a></li>
+          <ul class="navbar-nav mx-auto gap-2">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="mobiles.html">Mobiles</a></li>
             <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">Team</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html#reviews">Reviews</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
           <div class="d-flex gap-2 mt-3 mt-lg-0">
-            <a href="tel:+919904640764" class="btn btn-outline-light btn-sm px-3 nav-cta-btn" aria-label="Call Like Zone Mobile Shop">
-              <i class="bi bi-telephone-fill me-1"></i> Call Now
+            <a href="tel:+919904640764" class="custom-btn custom-btn-secondary custom-btn-sm px-3"
+              aria-label="Call Like Zone Mobile Shop">
+              Call Now
             </a>
-            <a href="https://wa.me/919904640764?text=Hello%20Like%20Zone%20Mobile%20Shop%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products%20and%20services."
-              target="_blank" rel="noopener noreferrer"
-              class="btn btn-whatsapp btn-sm px-3" aria-label="WhatsApp Like Zone Mobile Shop">
-              <i class="bi bi-whatsapp me-1"></i> WhatsApp
+            <a href="https://wa.me/919904640764"
+              target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-whatsapp custom-btn-sm px-3"
+              aria-label="WhatsApp Like Zone Mobile Shop">
+              WhatsApp
             </a>
           </div>
         </div>
@@ -79,22 +65,23 @@
     </nav>
   </header>
   <main>
+
 <!-- ============================================================
          MOBILE PHONES SECTION
     ============================================================ -->
-    <section id="mobiles" class="mobiles-section py-5" aria-label="Mobile Phones">
+    <section id="mobiles" class="mobiles-section section-padding" aria-label="Mobile Phones">
       <div class="container">
-        <div class="text-center mb-5 reveal-on-scroll">
+        <div class="text-center mb-5 ">
           <div class="section-label">Our Products</div>
           <h2 class="section-title">Latest <span class="gradient-text">Mobile Phones</span></h2>
           <p class="section-subtitle">Find the right smartphone for your needs.</p>
         </div>
         <div class="row g-4">
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Samsung</div>
               </div>
               <div class="product-body">
@@ -104,7 +91,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Powerful performance</li>
                   <li><i class="bi bi-check-circle-fill"></i> Multiple storage options</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about Samsung Galaxy phone availability and prices.')"
                   aria-label="Ask about Samsung on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -113,10 +100,10 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Apple</div>
               </div>
               <div class="product-body">
@@ -126,7 +113,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Advanced camera system</li>
                   <li><i class="bi bi-check-circle-fill"></i> Smooth performance</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about iPhone availability and prices.')"
                   aria-label="Ask about iPhone on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -135,10 +122,10 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Redmi</div>
               </div>
               <div class="product-body">
@@ -148,7 +135,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Powerful specifications</li>
                   <li><i class="bi bi-check-circle-fill"></i> Long battery life</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about Redmi/Xiaomi phone availability and prices.')"
                   aria-label="Ask about Redmi on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -157,10 +144,10 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Realme</div>
               </div>
               <div class="product-body">
@@ -170,7 +157,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Modern design</li>
                   <li><i class="bi bi-check-circle-fill"></i> Affordable options</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about Realme phone availability and prices.')"
                   aria-label="Ask about Realme on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -179,10 +166,10 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Vivo</div>
               </div>
               <div class="product-body">
@@ -192,7 +179,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Stylish appearance</li>
                   <li><i class="bi bi-check-circle-fill"></i> Excellent display</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about Vivo phone availability and prices.')"
                   aria-label="Ask about Vivo on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -201,10 +188,10 @@
             </article>
           </div>
 
-          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
-            <article class="product-card glass-card h-100">
-              <div class="product-icon-wrap" aria-hidden="true">
-                <i class="bi bi-phone-fill"></i>
+          <div class="col-sm-6 col-lg-4 ">
+            <article class="product-card custom-card h-100">
+              <div class="product-img-wrap" aria-hidden="true">
+                <i class="bi bi-phone"></i>
                 <div class="product-brand-badge">Oppo</div>
               </div>
               <div class="product-body">
@@ -214,7 +201,7 @@
                   <li><i class="bi bi-check-circle-fill"></i> Premium design</li>
                   <li><i class="bi bi-check-circle-fill"></i> Fast charging support</li>
                 </ul>
-                <button class="btn btn-whatsapp w-100 mt-3"
+                <button class="custom-btn custom-btn custom-btn-whatsapp w-100 mt-3"
                   onclick="openWhatsApp('Hello, I want to know about Oppo phone availability and prices.')"
                   aria-label="Ask about Oppo on WhatsApp">
                   <i class="bi bi-whatsapp me-2"></i>Ask on WhatsApp
@@ -234,89 +221,101 @@
     </section>
 
     
+  
   </main>
-<!-- FOOTER -->
-  <footer class="site-footer py-5" aria-label="Site Footer">
+  <footer class="site-footer" aria-label="Site Footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
-          <div class="footer-brand d-flex align-items-center gap-2 mb-3"><div class="logo-icon small-logo"><i class="bi bi-phone-fill"></i></div><div><div class="footer-logo-main">LIKE ZONE</div><div class="footer-logo-sub">MOBILE SHOP</div></div></div>
-          <p class="footer-tagline">Mobile Phones &bull; Accessories &bull; Services</p>
-          <p class="footer-address"><i class="bi bi-geo-alt-fill me-2"></i>Kasturba Dham, Tramba, Rajkot, Gujarat &ndash; 360020</p>
-          <a href="tel:+919904640764" class="footer-phone d-block mt-2"><i class="bi bi-telephone-fill me-2"></i>+91 99046 40764</a>
-          <div class="footer-social mt-3 d-flex gap-2">
-            <button class="footer-social-btn wa" onclick="openWhatsApp('Hello Like Zone Mobile Shop, I would like to know more about your products and services.')"><i class="bi bi-whatsapp"></i></button>
-            <a href="tel:+919904640764" class="footer-social-btn call"><i class="bi bi-telephone-fill"></i></a>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/LIKEZONE%20LOGO.png" alt="Like Zone Logo" style="height: 36px; width: auto; border-radius: 6px;" />
+            <div>
+              <div class="footer-logo-main">LIKE ZONE</div>
+              <div class="footer-logo-sub">MOBILE SHOP</div>
+            </div>
           </div>
+          <p class="footer-desc">Mobile Phones &bull; Accessories &bull; Services</p>
         </div>
         <div class="col-sm-6 col-lg-4">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="bi bi-chevron-right me-1"></i>Home</a></li>
-            <li><a href="mobiles.html"><i class="bi bi-chevron-right me-1"></i>Mobiles</a></li>
-            <li><a href="accessories.html"><i class="bi bi-chevron-right me-1"></i>Accessories</a></li>
-            <li><a href="services.html"><i class="bi bi-chevron-right me-1"></i>Services</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right me-1"></i>Team</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right me-1"></i>Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mobiles.html">Mobiles</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-4">
-          <h4 class="footer-heading">Contact Us</h4>
-          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>Kasturba Dham, Tramba, Rajkot, Gujarat &ndash; 360020</span></div>
-          <div class="footer-contact-item mt-2"><i class="bi bi-telephone-fill"></i><a href="tel:+919904640764">+91 99046 40764</a></div>
-          <div class="footer-contact-item mt-2"><i class="bi bi-whatsapp"></i><button class="footer-wa-link" onclick="openWhatsApp('Hello Like Zone Mobile Shop, I would like to know more about your products and services.')">Chat on WhatsApp</button></div>
-          <div class="footer-rating mt-3"><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i><span class="ms-2">4.2 / 5 &mdash; 22 Google Reviews</span></div>
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Kasturba Dham, Tramba, Rajkot, Gujarat – 360020</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+919904640764">+91 99046 40764</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <a href="javascript:void(0)" onclick="openWhatsApp('Hello Like Zone Mobile Shop, I have a question.')">Chat on WhatsApp</a>
+          </div>
         </div>
       </div>
       <hr class="footer-divider" />
-      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <p class="footer-copy mb-0">&copy; 2026 Like Zone Mobile Shop. All Rights Reserved.</p>
-        <div class="d-flex gap-2">
-          <button class="btn btn-whatsapp btn-sm" onclick="openWhatsApp('Hello Like Zone Mobile Shop, I would like to know more about your products and services.')"><i class="bi bi-whatsapp me-1"></i>WhatsApp</button>
-          <a href="tel:+919904640764" class="btn btn-outline-light btn-sm"><i class="bi bi-telephone-fill me-1"></i>Call</a>
-        </div>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 Like Zone Mobile Shop. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING BUTTONS -->
+  <!-- ============================================================
+       FLOATING BUTTONS
+  ============================================================ -->
   <div class="floating-buttons" aria-label="Floating contact buttons">
-    <button class="float-btn float-wa" onclick="openWhatsApp('Hello Like Zone Mobile Shop, I would like to know more about your products and services.')" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="bi bi-whatsapp"></i><span class="float-tooltip">Chat on WhatsApp</span></button>
-    <a href="tel:+919904640764" class="float-btn float-call" aria-label="Call Like Zone" title="Call Like Zone"><i class="bi bi-telephone-fill"></i><span class="float-tooltip">Call Like Zone</span></a>
+    <button class="float-btn float-wa"
+      onclick="openWhatsApp('Hello Like Zone Mobile Shop, I have a question.')"
+      aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></button>
+    <a href="tel:+919904640764" class="float-btn float-call" aria-label="Call Like Zone" title="Call Like Zone"><i
+        class="bi bi-telephone-fill"></i></a>
   </div>
 
-  <!-- CHATBOT TOGGLE -->
+  <!-- ============================================================
+       CHATBOT
+  ============================================================ -->
   <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open Like Zone Assistant chatbot" aria-expanded="false">
     <i class="bi bi-chat-dots-fill" id="chatToggleIcon"></i>
   </button>
 
-  <!-- CHATBOT WINDOW -->
-  <div class="chatbot-window glass-card" id="chatbotWindow" role="dialog" aria-label="Like Zone Assistant" aria-hidden="true">
+  <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Like Zone Assistant" aria-hidden="true">
     <div class="chatbot-header">
-      <div class="chatbot-header-info">
-        <div class="chatbot-avatar"><i class="bi bi-phone-fill"></i></div>
-        <div><div class="chatbot-title">Like Zone Assistant</div><div class="chatbot-subtitle">How can we help you?</div></div>
-      </div>
-      <div class="chatbot-header-actions">
-        <button class="chatbot-action-btn" id="chatbotMinimize" aria-label="Minimize chatbot"><i class="bi bi-dash-lg"></i></button>
-        <button class="chatbot-action-btn" id="chatbotClose" aria-label="Close chatbot"><i class="bi bi-x-lg"></i></button>
+      <div class="chatbot-title">LIKE ZONE ASSISTANT</div>
+      <button class="chatbot-action-btn" id="chatbotClose" aria-label="Close chatbot"><i class="bi bi-x"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
+      <!-- Messages injected by JS -->
+      <div class="chat-msg bot">
+        <div class="msg-bubble">Hello! How can we help?</div>
       </div>
     </div>
-    <div class="chatbot-messages" id="chatbotMessages" aria-live="polite"></div>
     <div class="chatbot-quick-replies" id="quickReplies">
-      <button class="quick-reply-btn" onclick="sendQuickReply('mobiles')"><i class="bi bi-phone-fill me-1"></i>Mobile Phones</button>
-      <button class="quick-reply-btn" onclick="sendQuickReply('accessories')"><i class="bi bi-headphones me-1"></i>Accessories</button>
-      <button class="quick-reply-btn" onclick="sendQuickReply('services')"><i class="bi bi-tools me-1"></i>Services</button>
-      <button class="quick-reply-btn" onclick="sendQuickReply('location')"><i class="bi bi-geo-alt-fill me-1"></i>Location</button>
-      <button class="quick-reply-btn" onclick="sendQuickReply('contact')"><i class="bi bi-telephone-fill me-1"></i>Contact</button>
+      <button class="quick-reply-btn" onclick="sendQuickReply('mobiles')">Mobile Phones</button>
+      <button class="quick-reply-btn" onclick="sendQuickReply('accessories')">Accessories</button>
+      <button class="quick-reply-btn" onclick="sendQuickReply('services')">Services</button>
+      <button class="quick-reply-btn" onclick="sendQuickReply('location')">Location</button>
+      <button class="quick-reply-btn" onclick="sendQuickReply('contact')">Contact</button>
     </div>
     <div class="chatbot-input-area">
-      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type a message..." aria-label="Type your message" onkeypress="handleChatInput(event)" />
-      <button class="chatbot-send-btn" onclick="handleSendMessage()" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type a message..."
+        aria-label="Type your message" onkeypress="handleChatInput(event)" />
+      <button class="chatbot-send-btn" onclick="handleSendMessage()" aria-label="Send message"><i
+          class="bi bi-send-fill"></i></button>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

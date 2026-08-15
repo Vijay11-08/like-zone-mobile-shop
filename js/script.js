@@ -18,28 +18,14 @@ function openWhatsApp(message) {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   const sections = document.querySelectorAll('section[id], div[id]');
 
-  // Scroll shadow
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
-    } else {
-      navbar.style.boxShadow = 'none';
-    }
-
-    // Active link
-    let current = '';
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      if (window.scrollY >= top) current = sec.getAttribute('id');
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
+    // Scroll shadow
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
+      } else {
+        navbar.style.boxShadow = 'none';
       }
     });
-  });
 
   // Smooth scroll for nav links
   navLinks.forEach(link => {
@@ -62,34 +48,7 @@ function openWhatsApp(message) {
   });
 })();
 
-/* ── Scroll Reveal (Intersection Observer) ───────────────────── */
-(function initScrollReveal() {
-  const elements = document.querySelectorAll('.reveal-on-scroll');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        // Stagger delay based on sibling index
-        const siblings = entry.target.parentElement
-          ? Array.from(entry.target.parentElement.children).filter(el => el.classList.contains('reveal-on-scroll'))
-          : [];
-        const idx = siblings.indexOf(entry.target);
-        const delay = Math.min(idx * 80, 400);
-
-        setTimeout(() => {
-          entry.target.classList.add('revealed');
-        }, delay);
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
-  });
-
-  elements.forEach(el => observer.observe(el));
-})();
 
 /* ── Hero Content Fade-in on Load ────────────────────────────── */
 (function initHeroAnimation() {
@@ -385,44 +344,7 @@ function openWhatsApp(message) {
   floatingBtns.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
 })();
 
-/* ── Ripple Effect on Buttons ────────────────────────────────── */
-(function initRipple() {
-  document.querySelectorAll('.btn-primary-gradient, .btn-whatsapp').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const rect   = this.getBoundingClientRect();
-      const x      = e.clientX - rect.left;
-      const y      = e.clientY - rect.top;
-      const ripple = document.createElement('span');
 
-      ripple.style.cssText = `
-        position:absolute;
-        border-radius:50%;
-        background:rgba(255,255,255,0.3);
-        width:10px;height:10px;
-        left:${x - 5}px;top:${y - 5}px;
-        transform:scale(0);
-        animation:rippleAnim 0.5s ease-out forwards;
-        pointer-events:none;
-      `;
-
-      if (!this.style.position || this.style.position === 'static') {
-        this.style.position = 'relative';
-      }
-      this.style.overflow = 'hidden';
-      this.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
-    });
-  });
-
-  // Inject ripple keyframe
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes rippleAnim {
-      to { transform: scale(30); opacity: 0; }
-    }
-  `;
-  document.head.appendChild(style);
-})();
 
 /* ── Smooth Anchor Scrolling (fallback for non-nav links) ────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
