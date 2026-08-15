@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Like Zone Mobile Shop | Mobile Phones &amp; Accessories in Tramba, Rajkot</title>
+  <title>About Us & Team | Like Zone Mobile Shop | Tramba, Rajkot</title>
   <meta name="description"
-    content="Like Zone Mobile Shop in Kasturba Dham, Tramba, Rajkot. Explore mobile phones, accessories, chargers, scratch guards and mobile-related services." />
+    content="Meet the team behind Like Zone Mobile Shop in Tramba, Rajkot. A trusted local mobile shop offering phones, accessories, and services." />
   <meta name="keywords"
-    content="Like Zone Mobile Shop, mobile shop Tramba, mobile shop Rajkot, mobile phones Tramba, mobile accessories Rajkot" />
+    content="Like Zone Mobile Shop team, mobile shop Tramba, Pinjalbhai, Mohin Khan, Vaibhav Gohil, Vijay Otaradi, Rajkot mobile shop" />
   <meta name="author" content="Like Zone Mobile Shop" />
-  <meta property="og:title" content="Like Zone Mobile Shop | Tramba, Rajkot" />
-  <meta property="og:description" content="Your trusted mobile phone and accessories shop in Tramba, Rajkot." />
+  <meta property="og:title" content="About & Team | Like Zone Mobile Shop | Tramba, Rajkot" />
+  <meta property="og:description"
+    content="Meet the dedicated team at Like Zone Mobile Shop, your trusted mobile store in Tramba, Rajkot." />
   <meta property="og:type" content="website" />
 
   <!-- Bootstrap 5 CSS -->
@@ -20,14 +21,254 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── Page-specific enhancements ── */
+    .page-hero {
+      background: var(--light);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 0 40px;
+    }
+    .page-hero-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .page-hero-sub {
+      font-size: 1rem;
+      color: var(--gray);
+      margin-top: 8px;
+    }
+    .breadcrumb-link {
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .breadcrumb-link:hover { text-decoration: underline; }
+
+    /* ── Stats ── */
+    .stat-card {
+      padding: 20px 12px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    /* ── About section icons ── */
+    .about-icon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .about-icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 8px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .about-icon-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .about-icon-item i { font-size: 1.5rem; color: var(--primary); }
+    .about-icon-item span { font-size: 0.78rem; color: var(--gray); font-weight: 600; }
+
+    /* ── Highlight badges ── */
+    .highlight-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(227,6,19,0.06);
+      border: 1px solid rgba(227,6,19,0.2);
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+
+    /* ── Why Us cards ── */
+    .why-card { padding: 28px 20px; text-align: center; }
+    .why-icon {
+      width: 56px; height: 56px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin: 0 auto 16px;
+      transition: var(--transition);
+    }
+    .why-card:hover .why-icon { background: var(--primary); color: #fff; }
+    .why-title { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .why-desc  { font-size: 0.88rem; color: var(--gray); }
+
+    /* ── Team Cards (enhanced) ── */
+    .team-card {
+      padding: 0;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .team-card:hover { transform: translateY(-5px); }
+    .team-card-top {
+      background: var(--light);
+      padding: 28px 20px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .team-avatar-wrap {
+      width: 100px; height: 100px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--white);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+    .team-card:hover .team-avatar-wrap { transform: scale(1.05); }
+    .team-avatar {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .team-name  { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .team-role  {
+      font-size: 0.8rem; font-weight: 600; color: var(--primary);
+      background: rgba(227,6,19,0.08); border: 1px solid rgba(227,6,19,0.2);
+      padding: 3px 12px; border-radius: 50px; display: inline-block;
+    }
+    .team-card-body {
+      padding: 16px 20px 20px;
+      text-align: center;
+    }
+    .team-desc { font-size: 0.88rem; color: var(--gray); margin-bottom: 16px; }
+    
+    .team-numbers {
+      margin-bottom: 14px;
+    }
+    .team-number-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .team-number-item a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+    .team-number-item a:hover { color: var(--primary); }
+    .team-number-item i { color: var(--primary); font-size: 0.9rem; }
+    .num-label {
+      font-size: 0.7rem;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 1px 8px;
+      color: var(--gray);
+      font-weight: 600;
+    }
+
+    .team-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .team-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: var(--radius-sm);
+      font-size: 0.82rem; font-weight: 600;
+      transition: var(--transition); border: 1px solid transparent;
+    }
+    .team-btn.call {
+      background: var(--light); color: var(--dark); border-color: var(--border);
+    }
+    .team-btn.call:hover { background: var(--dark); color: #fff; }
+    .team-btn.wa {
+      background: rgba(37,211,102,0.1); color: #128C7E; border-color: rgba(37,211,102,0.3);
+    }
+    .team-btn.wa:hover { background: #25D366; color: #fff; border-color: #25D366; }
+
+    /* ── Owner Section ── */
+    .owner-section { background: var(--light); }
+    .owner-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .owner-img-wrap {
+      width: 150px; height: 150px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--white);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    .owner-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .owner-name { font-size: 1.5rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+    .owner-title { font-size: 0.9rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .owner-desc { font-size: 0.95rem; color: var(--gray); line-height: 1.8; }
+
+    /* ── Map Section ── */
+    .map-section { background: var(--white); }
+    .map-embed {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .map-embed iframe { display: block; width: 100%; height: 380px; border: none; }
+    .map-info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+    }
+    .map-info-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 20px;
+    }
+    .map-info-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--light); border: 1px solid var(--border);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: var(--primary); font-size: 1rem;
+    }
+    .map-info-text h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+    .map-info-text p, .map-info-text a { font-size: 0.9rem; color: var(--gray); margin: 0; }
+  </style>
 </head>
 
 <body>
-<header>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header>
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar sticky-top" id="mainNavbar"
       aria-label="Main navigation">
       <div class="container">
@@ -48,29 +289,45 @@
 
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav mx-auto gap-2">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="mobiles.html">Mobiles</a></li>
             <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
             <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">Team</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">Team</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
           <div class="d-flex gap-2 mt-3 mt-lg-0">
             <a href="tel:+919904640764" class="custom-btn custom-btn-secondary custom-btn-sm px-3"
               aria-label="Call Like Zone Mobile Shop">
-              Call Now
+              <i class="bi bi-telephone-fill me-1"></i>Call Now
             </a>
             <a href="https://wa.me/919904640764"
               target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-whatsapp custom-btn-sm px-3"
               aria-label="WhatsApp Like Zone Mobile Shop">
-              WhatsApp
+              <i class="bi bi-whatsapp me-1"></i>WhatsApp
             </a>
           </div>
         </div>
       </div>
     </nav>
   </header>
+
   <main>
+
+    <!-- ============================================================
+         PAGE HERO
+    ============================================================ -->
+    <section class="page-hero" aria-label="Page Header">
+      <div class="container">
+        <div class="d-flex gap-2 align-items-center mb-3">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <i class="bi bi-chevron-right" style="font-size:0.75rem; color:var(--gray)"></i>
+          <span style="font-size:0.9rem; color:var(--gray)">About Us</span>
+        </div>
+        <h1 class="page-hero-title">About <span style="color:var(--primary)">Like Zone</span> Mobile Shop</h1>
+        <p class="page-hero-sub">Trusted • Local • Professional</p>
+      </div>
+    </section>
 
     <!-- ============================================================
          ABOUT SECTION
@@ -78,54 +335,61 @@
     <section id="about" class="about-section section-padding" aria-label="About Like Zone Mobile Shop">
       <div class="container">
         <div class="row align-items-center g-5">
-          <div class="col-lg-6 ">
-            <div class="section-label">About Us</div>
-            <h2 class="section-title">About <span class="gradient-text">Like Zone</span><br />Mobile Shop</h2>
-            <p class="section-desc">
-              Like Zone Mobile Shop is a local mobile phone and accessories store serving customers
-              in the Tramba area of Rajkot. The shop offers mobile phones, accessories, scratch guards,
-              chargers and mobile-related services.
+          <!-- Left: Text -->
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="section-label">Who We Are</span>
+            <h2 class="section-title mb-3">Serving Tramba &amp;<br />Rajkot Since Day One</h2>
+            <p class="section-desc text-start mb-4">
+              Like Zone Mobile Shop is a trusted local mobile phone and accessories store serving customers
+              in the Tramba area of Rajkot, Gujarat. The shop provides quality smartphones, mobile
+              accessories, screen guards, chargers, cables, and mobile-related services — all under one roof.
             </p>
-            <div class="about-highlights d-flex flex-wrap gap-3 mb-4">
-              <span class="highlight-badge"><i class="bi bi-geo-alt-fill me-1"></i>Local</span>
-              <span class="highlight-badge"><i class="bi bi-shield-check-fill me-1"></i>Trusted</span>
-              <span class="highlight-badge"><i class="bi bi-person-heart me-1"></i>Customer Focused</span>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="highlight-badge"><i class="bi bi-geo-alt-fill"></i>Local Shop</span>
+              <span class="highlight-badge"><i class="bi bi-shield-check-fill"></i>Trusted</span>
+              <span class="highlight-badge"><i class="bi bi-person-heart"></i>Customer First</span>
             </div>
             <div class="row g-3">
               <div class="col-4">
-                <div class="stat-card custom-card text-center">
-                  <div class="stat-value">4.2 <i class="bi bi-star-fill text-warning" style="font-size:0.7em"></i></div>
+                <div class="stat-card custom-card">
+                  <div class="stat-value">4.2 <i class="bi bi-star-fill" style="font-size:0.8rem; color:#F59E0B"></i></div>
                   <div class="stat-label">Google Rating</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="stat-card custom-card text-center">
+                <div class="stat-card custom-card">
                   <div class="stat-value">22+</div>
                   <div class="stat-label">Google Reviews</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="stat-card custom-card text-center">
-                  <div class="stat-value"><i class="bi bi-geo-alt-fill"
-                      style="font-size:1.2rem;color:var(--accent-blue)"></i></div>
+                <div class="stat-card custom-card">
+                  <div class="stat-value"><i class="bi bi-geo-alt-fill" style="font-size:1.2rem; color:var(--primary)"></i></div>
                   <div class="stat-label">Tramba, Rajkot</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 ">
-            <div class="about-visual-card custom-card">
-              <div class="about-icon-grid" aria-hidden="true">
+          <!-- Right: Icon Grid -->
+          <div class="col-lg-6 reveal-on-scroll">
+            <div class="custom-card p-4">
+              <div class="about-icon-grid">
                 <div class="about-icon-item"><i class="bi bi-phone-fill"></i><span>Mobiles</span></div>
                 <div class="about-icon-item"><i class="bi bi-headphones"></i><span>Accessories</span></div>
                 <div class="about-icon-item"><i class="bi bi-tools"></i><span>Services</span></div>
-                <div class="about-icon-item"><i class="bi bi-shield-check-fill"></i><span>Protection</span></div>
+                <div class="about-icon-item"><i class="bi bi-shield-check-fill"></i><span>Screen Guard</span></div>
                 <div class="about-icon-item"><i class="bi bi-lightning-charge-fill"></i><span>Chargers</span></div>
                 <div class="about-icon-item"><i class="bi bi-whatsapp"></i><span>WhatsApp</span></div>
               </div>
-              <div class="about-card-footer">
-                <i class="bi bi-geo-alt-fill me-2"></i>
-                Kasturba Dham, Tramba, Rajkot, Gujarat – 360020
+              <div class="d-flex align-items-start gap-2 p-3" style="background:var(--light); border-radius:var(--radius-sm); border:1px solid var(--border)">
+                <i class="bi bi-geo-alt-fill mt-1" style="color:var(--primary); flex-shrink:0"></i>
+                <a href="https://share.google/7ReG8tDQKAD49XWqs" target="_blank" rel="noopener noreferrer"
+                   style="font-size:0.88rem; color:var(--gray); line-height:1.5;">
+                  Like Zone Mobile Shop, 6WG6+WCC, Tramba, Rajkot, Gujarat 360020
+                  <span style="display:block; color:var(--primary); font-weight:600; font-size:0.8rem; margin-top:2px;">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Get Directions on Google Maps
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -133,139 +397,301 @@
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section id="why-us" class="why-section section-padding" aria-label="Why Choose Us">
+    <!-- ============================================================
+         WHY CHOOSE US
+    ============================================================ -->
+    <section id="why-us" class="section-padding" style="background:var(--light);" aria-label="Why Choose Us">
       <div class="container">
-        <div class="text-center mb-5 ">
-          <div class="section-label">Why Us</div>
-          <h2 class="section-title">Why <span class="gradient-text">Choose Us</span></h2>
-          <p class="section-subtitle">Reasons to shop at Like Zone Mobile Shop.</p>
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="section-label">Why Us</span>
+          <h2 class="section-title">Why Choose <span style="color:var(--primary)">Like Zone</span></h2>
+          <p class="section-subtitle">Reasons to trust and shop at Like Zone Mobile Shop.</p>
         </div>
         <div class="row g-4">
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
               <div class="why-icon"><i class="bi bi-geo-alt-fill"></i></div>
               <h3 class="why-title">Local Shop</h3>
-              <p class="why-desc">Conveniently located in Tramba, Rajkot.</p>
+              <p class="why-desc">Conveniently located in Tramba, Rajkot — easy to visit.</p>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
               <div class="why-icon"><i class="bi bi-phone-fill"></i></div>
-              <h3 class="why-title">Mobile Products</h3>
-              <p class="why-desc">Smartphones and mobile-related products from popular brands.</p>
+              <h3 class="why-title">Wide Range</h3>
+              <p class="why-desc">Smartphones and accessories from all popular brands.</p>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
-              <div class="why-icon"><i class="bi bi-headphones"></i></div>
-              <h3 class="why-title">Accessories</h3>
-              <p class="why-desc">Wide range of mobile accessories including covers, chargers and cables.</p>
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
+              <div class="why-icon"><i class="bi bi-star-fill"></i></div>
+              <h3 class="why-title">4.2★ Rated</h3>
+              <p class="why-desc">Trusted by 22+ customers with a 4.2-star Google rating.</p>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
               <div class="why-icon"><i class="bi bi-person-check-fill"></i></div>
-              <h3 class="why-title">Customer Support</h3>
-              <p class="why-desc">Direct assistance for all your enquiries and product-related questions.</p>
+              <h3 class="why-title">Personal Support</h3>
+              <p class="why-desc">Get direct assistance for all your enquiries and questions.</p>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
               <div class="why-icon"><i class="bi bi-whatsapp"></i></div>
-              <h3 class="why-title">Easy Contact</h3>
-              <p class="why-desc">Call or WhatsApp with one click for quick communication.</p>
+              <h3 class="why-title">WhatsApp Ready</h3>
+              <p class="why-desc">Chat with us on WhatsApp for quick answers and enquiries.</p>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 ">
-            <div class="why-card custom-card text-center">
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <div class="why-card custom-card">
               <div class="why-icon"><i class="bi bi-map-fill"></i></div>
-              <h3 class="why-title">Convenient Location</h3>
-              <p class="why-desc">Easy to find at Kasturba Dham, Tramba.</p>
+              <h3 class="why-title">Easy to Find</h3>
+              <p class="why-desc">Our Plus Code is 6WG6+WCC, Tramba. Find us on Google Maps instantly.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TEAM SECTION -->
-    <section id="team" class="team-section section-padding" aria-label="Our Team">
+    <!-- ============================================================
+         OWNER SECTION
+    ============================================================ -->
+    <section id="owner" class="owner-section section-padding" aria-label="Shop Owner">
       <div class="container">
-        <div class="text-center mb-5 ">
-          <div class="section-label">Our People</div>
-          <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
-          <p class="section-subtitle">The dedicated people behind Like Zone Mobile Shop.</p>
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="section-label">Leadership</span>
+          <h2 class="section-title">The Owner</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 reveal-on-scroll">
+            <div class="owner-card text-center">
+              <div class="owner-img-wrap mx-auto">
+                <img src="images/owner_pinjalbhai_new.png" alt="Pinjalbhai P. Solanki - Owner of Like Zone Mobile Shop"
+                  class="owner-img" />
+              </div>
+              <h2 class="owner-name">Pinjal Bhai P. Solanki</h2>
+              <div class="owner-title">Owner — Like Zone Mobile Shop</div>
+              <p class="owner-desc mx-auto mb-4" style="max-width:500px;">
+                Pinjal Bhai leads Like Zone Mobile Shop with dedication and customer-first values. 
+                He oversees all shop operations, product selections, and ensures every customer 
+                gets the best guidance and service at the shop.
+              </p>
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="tel:+919904640764" class="custom-btn custom-btn-secondary">
+                  <i class="bi bi-telephone-fill me-2"></i>+91 99046 40764
+                </a>
+                <button onclick="openWhatsApp('Hello, I would like to speak with the shop owner Pinjalbhai.')"
+                  class="custom-btn custom-btn-whatsapp">
+                  <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TEAM SECTION
+    ============================================================ -->
+    <section id="team" class="section-padding" style="background:var(--white);" aria-label="Our Team">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="section-label">Our People</span>
+          <h2 class="section-title">Meet Our <span style="color:var(--primary)">Team</span></h2>
+          <p class="section-subtitle">The dedicated staff who make Like Zone Mobile Shop special.</p>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-sm-6 col-lg-3 ">
-            <article class="team-card custom-card custom-card text-center">
-              <div class="team-avatar-wrap"><img src="images/owner_pinjalbhai_new.png" alt="Pinjalbhai - Shop Owner"
-                  class="team-avatar" /></div>
-              <h3 class="team-name">Pinjalbhai</h3>
-              <div class="team-role">Shop Owner / Manager</div>
-              <p class="team-desc">Responsible for shop management and customer assistance.</p>
-              <div class="team-actions">
-                <a href="tel:+919904640764" class="team-btn call-btn"><i class="bi bi-telephone-fill"></i></a>
-                <button class="team-btn wa-btn"
-                  onclick="openWhatsApp('Hello, I would like to speak with the shop owner.')"><i
-                    class="bi bi-whatsapp"></i></button>
+
+          <!-- Mohin Khan -->
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <article class="team-card custom-card">
+              <div class="team-card-top">
+                <div class="team-avatar-wrap">
+                  <img src="images/worker_mohin_new.png" alt="Mohin Khan - Mobile Sales Specialist" class="team-avatar" />
+                </div>
+                <h3 class="team-name">Mohin Khan</h3>
+                <div class="team-role">Mobile Sales Specialist</div>
+              </div>
+              <div class="team-card-body">
+                <p class="team-desc">Helps customers select the best smartphones and accessories that match their needs and budget.</p>
+                
+                <!-- Contact Numbers -->
+                <div class="team-numbers">
+                  <div class="team-number-item">
+                    <i class="bi bi-telephone-fill" style="color:var(--primary)"></i>
+                    <a href="tel:+919714520147">+91 97145 20147</a>
+                    <span class="num-label">Primary</span>
+                  </div>
+                  <div class="team-number-item">
+                    <i class="bi bi-telephone" style="color:var(--gray)"></i>
+                    <a href="tel:+918200942424">+91 82009 42424</a>
+                    <span class="num-label">Alternate</span>
+                  </div>
+                </div>
+
+                <div class="team-actions">
+                  <a href="tel:+919714520147" class="team-btn call">
+                    <i class="bi bi-telephone-fill"></i> Call
+                  </a>
+                  <button onclick="openWhatsApp('Hello Mohin Khan, I need help selecting a smartphone.')"
+                    class="team-btn wa">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                  </button>
+                </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-6 col-lg-3 ">
-            <article class="team-card custom-card custom-card text-center">
-              <div class="team-avatar-wrap"><img src="images/worker_mohin_new.png"
-                  alt="Mohin Khan - Mobile Sales Specialist" class="team-avatar" /></div>
-              <h3 class="team-name">Mohin Khan</h3>
-              <div class="team-role">Mobile Sales Specialist</div>
-              <p class="team-desc">Helps customers select smartphones and accessories.</p>
-              <div class="team-actions">
-                <a href="tel:+919714520147" class="team-btn call-btn" title="Call Primary (9714520147)"><i
-                    class="bi bi-telephone-fill"></i></a>
-                <a href="tel:+918200942424" class="team-btn call-btn" title="Call Alternate (8200942424)"><i
-                    class="bi bi-telephone"></i></a>
-                <button class="team-btn wa-btn" onclick="openWhatsApp('Hello, I need help selecting a smartphone.')"><i
-                    class="bi bi-whatsapp"></i></button>
+
+          <!-- Vaibhav Gohil -->
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <article class="team-card custom-card">
+              <div class="team-card-top">
+                <div class="team-avatar-wrap">
+                  <img src="images/worker_vaibhav_new.png" alt="Vaibhav Gohil - Accessories Specialist" class="team-avatar" />
+                </div>
+                <h3 class="team-name">Vaibhav Gohil</h3>
+                <div class="team-role">Accessories Specialist</div>
+              </div>
+              <div class="team-card-body">
+                <p class="team-desc">Handles all mobile covers, chargers, cables, tempered glass, and accessories with expert knowledge.</p>
+
+                <!-- Contact Number -->
+                <div class="team-numbers">
+                  <div class="team-number-item">
+                    <i class="bi bi-telephone-fill" style="color:var(--primary)"></i>
+                    <a href="tel:+919924952619">+91 99249 52619</a>
+                    <span class="num-label">Primary</span>
+                  </div>
+                </div>
+
+                <div class="team-actions">
+                  <a href="tel:+919924952619" class="team-btn call">
+                    <i class="bi bi-telephone-fill"></i> Call
+                  </a>
+                  <button onclick="openWhatsApp('Hello Vaibhav, I need help with mobile accessories.')"
+                    class="team-btn wa">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                  </button>
+                </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-6 col-lg-3 ">
-            <article class="team-card custom-card custom-card text-center">
-              <div class="team-avatar-wrap"><img src="images/worker_vaibhav_new.png"
-                  alt="Vaibhav Gohil - Accessories Specialist" class="team-avatar" /></div>
-              <h3 class="team-name">Vaibhav Gohil</h3>
-              <div class="team-role">Accessories Specialist</div>
-              <p class="team-desc">Handles covers, chargers, cables, and tempered glass.</p>
-              <div class="team-actions">
-                <a href="tel:+919924952619" class="team-btn call-btn"><i class="bi bi-telephone-fill"></i></a>
-                <button class="team-btn wa-btn" onclick="openWhatsApp('Hello, I need help with mobile accessories.')"><i
-                    class="bi bi-whatsapp"></i></button>
+
+          <!-- Vijay Otaradi -->
+          <div class="col-sm-6 col-lg-4 reveal-on-scroll">
+            <article class="team-card custom-card">
+              <div class="team-card-top">
+                <div class="team-avatar-wrap">
+                  <img src="images/worker_vijay_new.png" alt="Vijay Otaradi - Service & Customer Support" class="team-avatar" />
+                </div>
+                <h3 class="team-name">Vijay Otaradi</h3>
+                <div class="team-role">Service &amp; Customer Support</div>
+              </div>
+              <div class="team-card-body">
+                <p class="team-desc">Handles customer enquiries, service assistance, and ensures every visitor is helped with care.</p>
+
+                <!-- Contact Number -->
+                <div class="team-numbers">
+                  <div class="team-number-item">
+                    <i class="bi bi-telephone-fill" style="color:var(--primary)"></i>
+                    <a href="tel:+918320852144">+91 83208 52144</a>
+                    <span class="num-label">Primary</span>
+                  </div>
+                </div>
+
+                <div class="team-actions">
+                  <a href="tel:+918320852144" class="team-btn call">
+                    <i class="bi bi-telephone-fill"></i> Call
+                  </a>
+                  <button onclick="openWhatsApp('Hello Vijay, I need customer support assistance.')"
+                    class="team-btn wa">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                  </button>
+                </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-6 col-lg-3 ">
-            <article class="team-card custom-card custom-card text-center">
-              <div class="team-avatar-wrap"><img src="images/worker_vijay_new.png"
-                  alt="Vijay Otaradi - Service and Customer Support" class="team-avatar" /></div>
-              <h3 class="team-name">Vijay Otaradi</h3>
-              <div class="team-role">Service &amp; Customer Support</div>
-              <p class="team-desc">Handles customer enquiries and service assistance.</p>
-              <div class="team-actions">
-                <a href="tel:+918320852144" class="team-btn call-btn"><i class="bi bi-telephone-fill"></i></a>
-                <button class="team-btn wa-btn" onclick="openWhatsApp('Hello, I need customer support assistance.')"><i
-                    class="bi bi-whatsapp"></i></button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOCATION / GOOGLE MAPS
+    ============================================================ -->
+    <section id="location" class="map-section section-padding" aria-label="Shop Location">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="section-label">Find Us</span>
+          <h2 class="section-title">Our <span style="color:var(--primary)">Location</span></h2>
+          <p class="section-subtitle">Visit us at Like Zone Mobile Shop, Tramba, Rajkot.</p>
+        </div>
+        <div class="row g-4 align-items-start">
+          <!-- Map Embed -->
+          <div class="col-lg-8 reveal-on-scroll">
+            <div class="map-embed">
+              <iframe
+                src="https://maps.google.com/maps?q=Like+Zone+Mobile+Shop,+6WG6%2BWCC,+Tramba,+Rajkot,+Gujarat+360020&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Like Zone Mobile Shop Location on Google Maps">
+              </iframe>
+            </div>
+          </div>
+          <!-- Info Panel -->
+          <div class="col-lg-4 reveal-on-scroll">
+            <div class="map-info-card">
+              <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:20px; color:var(--dark);">Visit Our Shop</h3>
+
+              <div class="map-info-item">
+                <div class="map-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="map-info-text">
+                  <h4>Address</h4>
+                  <p>Like Zone Mobile Shop, 6WG6+WCC, Tramba, Rajkot, Gujarat – 360020</p>
+                </div>
               </div>
-            </article>
+
+              <div class="map-info-item">
+                <div class="map-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div class="map-info-text">
+                  <h4>Phone</h4>
+                  <a href="tel:+919904640764">+91 99046 40764</a>
+                </div>
+              </div>
+
+              <div class="map-info-item">
+                <div class="map-info-icon"><i class="bi bi-whatsapp"></i></div>
+                <div class="map-info-text">
+                  <h4>WhatsApp</h4>
+                  <a href="javascript:void(0)" onclick="openWhatsApp('Hello, I want to visit Like Zone Mobile Shop.')">
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-3 d-grid gap-2">
+                <a href="https://share.google/7ReG8tDQKAD49XWqs"
+                  target="_blank" rel="noopener noreferrer"
+                  class="custom-btn custom-btn-primary">
+                  <i class="bi bi-map-fill me-2"></i>Get Directions
+                </a>
+                <a href="tel:+919904640764" class="custom-btn custom-btn-secondary">
+                  <i class="bi bi-telephone-fill me-2"></i>Call Now
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-
-  
   </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
   <footer class="site-footer" aria-label="Site Footer">
     <div class="container">
       <div class="row g-4">
@@ -294,7 +720,9 @@
           <h4 class="footer-heading">Contact</h4>
           <div class="footer-contact-item">
             <i class="bi bi-geo-alt-fill"></i>
-            <span>Kasturba Dham, Tramba, Rajkot, Gujarat – 360020</span>
+            <a href="https://share.google/7ReG8tDQKAD49XWqs" target="_blank" rel="noopener noreferrer" style="color:inherit;">
+              Like Zone Mobile Shop, 6WG6+WCC, Tramba, Rajkot, Gujarat 360020
+            </a>
           </div>
           <div class="footer-contact-item">
             <i class="bi bi-telephone-fill"></i>
@@ -337,7 +765,6 @@
       <button class="chatbot-action-btn" id="chatbotClose" aria-label="Close chatbot"><i class="bi bi-x"></i></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
-      <!-- Messages injected by JS -->
       <div class="chat-msg bot">
         <div class="msg-bubble">Hello! How can we help?</div>
       </div>

@@ -358,3 +358,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+/* ── Scroll Reveal (Intersection Observer) ───────────────────── */
+(function initScrollReveal() {
+  const elements = document.querySelectorAll('.reveal-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Simple reveal
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -20px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+})();
