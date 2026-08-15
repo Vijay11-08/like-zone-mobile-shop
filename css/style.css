@@ -1,3 +1,4 @@
+/* Team Avatar Image styles — added for real photo support */
 /* ============================================================
    LIKE ZONE MOBILE SHOP — style.css
    Premium Glassmorphism Theme
@@ -1456,3 +1457,21 @@ section, header, footer, main { position: relative; z-index: 1; }
 }
 .team-card:hover { transform: translateY(-8px); }
 .team-card:hover .team-avatar { transform: scale(1.08); }
+/* -- Team Avatar Image (real photos) ------------------------- */
+.team-avatar-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid rgba(59,130,246,0.4);
+  box-shadow: 0 8px 24px rgba(59,130,246,0.3);
+  transition: var(--transition);
+  display: block;
+  margin: 0 auto;
+}
+.team-card:hover .team-avatar-img {
+  transform: scale(1.08);
+  border-color: rgba(59,130,246,0.7);
+  box-shadow: 0 12px 32px rgba(59,130,246,0.5);
+}
